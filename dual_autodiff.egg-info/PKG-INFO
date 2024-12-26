@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: dual_autodiff
+Version: 0.1.0
+Summary: Automatic differentiation using dual numbers.
+Author-email: Ngoc Anh Doan <nad60@cam.ac.uk>
+License: MIT License
+Keywords: automatic-differentiation,dual-numbers,forward-mode
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+
+Hello! Welcome to the package!
+
+# Dual_autodiff
+
+## Description
+This reporsitory contains the code for the dual_autodiff package and a report detailing the process of making the package. The aim was to demonstrate software developping good practice and also a Cythonized version of the package using C was implemented to compare the performance of pure Python and Cythonized Python.
+
+## Contents
+
+Inside this directory, there are a few sub-directories one can explore. 
+
+The first code directory (```dual_autodiff```) contains all the code used in the package. 
+
+The second is the dual_autodiff_x directory (```dual_autodiff_x```), which is the cythonized version of the package. 
+
+There is also a (```docs```) which contains a html pages that feature all what
+we have implemented with clear explanations and examples. 
+
+Also, the code directory (```Docker-Test```) is made to test the wheels using Docker Image.
+
+The last one is the ```report``` directory, which contains the LaTeX file for the report, as well as the pdf version of it, along with the references ```.bib``` file.
+
+## How to run
+
+To run the ```dual_autodiff``` package, you can use the simple line of code ```pip install -e . ``` to be able to install the package everywhere in your repository. 
+
+You can play around with the package and test whether it works using ```pytest -s tests\*```.
+
+The html version of the package is inside ```docs/build/html``` and ready to run by ```open index.html```.
+
+In the ```dual_autodiff_x``` file there is a file called ```wheelhouse```. Two wheels of the cythonized package ```dual_autodiff_x``` were created and put in here, if you download it to your local computer, using CSD3 or Docker Image, you can run this wheel as a package ```dual_autodiff_x```.
+
+There is also a folder ```Docker-Test``` that includes several files. A dockerfile is already written so that you can test to install the wheel for Python 3.10 immediately by ```docker build --platform linux/amd64 -t my-python-app .```.
+

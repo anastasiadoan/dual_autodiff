@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel", "setuptools_scm", "cython"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dual_autodiff"
+version = "0.1.0"
+description = "Automatic differentiation using dual numbers."
+readme = "README.md"
+authors = [
+    { name = "Ngoc Anh Doan", email = "nad60@cam.ac.uk" }
+]
+license = { file = "LICENSE" }
+keywords = ["automatic-differentiation", "dual-numbers", "forward-mode"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "License :: OSI Approved :: MIT License"
+]
+dependencies = [
+    "numpy"
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["dual_autodiff", "dual_autodiff.*"]
